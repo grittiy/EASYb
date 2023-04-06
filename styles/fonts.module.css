@@ -1,0 +1,144 @@
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-ExtraLight.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-ExtraLightItalic.ttf');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-Italic.ttf');
+    font-style: italic;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-MediumItalic.ttf');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Mali';
+    src: url('public/fonts/Mali-SemiBoldItalic.ttf');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('public/fonts/EBGaramond-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('public/fonts/EBGaramond-BoldItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('public/fonts/EBGaramond-ExtraBold.ttf');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('public/fonts/EBGaramond-ExtraBoldItalic.ttf');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('public/fonts/EBGaramond-Italic.ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('public/fonts/EBGaramond-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('public/fonts/EBGaramond-MediumItalic.ttf');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('public/fonts/EBGaramond-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('public/fonts/EBGaramond-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('public/fonts/EBGaramond-SemiBoldItalic.ttf');
+    font-weight: 600;
+    font-style: italic;
+}
+

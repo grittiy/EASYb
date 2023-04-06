@@ -1,14 +1,27 @@
-import Image from 'next/image'
+'use client'
+// import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+import Head from 'next/head'
+// import styles from './page.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
+    <main >
+      <div >
+        <Head>
+      <title>หน้าหลัก | EASYb</title>
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <link rel="icon" href="/logoeasyb.png" />
+      </Head>
+      <div>
+        hrllo
+      Dashboard
+      </div>
+
+      
+        {/* <p>
           Get started by editing&nbsp;
           <code className={styles.code}>app/page.tsx</code>
         </p>
@@ -84,7 +97,7 @@ export default function Home() {
           <p className={inter.className}>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
-        </a>
+        </a> */}
       </div>
     </main>
   )
