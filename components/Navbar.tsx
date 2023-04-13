@@ -14,7 +14,6 @@ import {
   IconButton,
   ListItemText
 } from '@mui/material'
-import Head from 'next/head'
 import React, { use, useState } from 'react'
 import Image from 'next/image'
 import { Box } from '@mui/system';

@@ -10,17 +10,15 @@ export default function Home() {
   return (
     <main >
       <div >
-        <Head>
-      <title>หน้าหลัก | EASYb</title>
-      <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <link rel="icon" href="/logoeasyb.png" />
-      </Head>
-      <div>
-        hrllo
-      Dashboard
-      </div>
+        <title>หน้าหลัก | EASYb</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="icon" href="/logoeasyb.png" />
+        <div>
+          hrllo
+          Dashboard
+        </div>
 
-      
+
         {/* <p>
           Get started by editing&nbsp;
           <code className={styles.code}>app/page.tsx</code>

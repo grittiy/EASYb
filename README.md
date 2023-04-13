@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## login 
+----------------------------------
+- admin 
+    user_name: 'admin@gmail.com'
+    user_password: '123456789'
+
 ## Getting Started
 
 First, run the development server:
