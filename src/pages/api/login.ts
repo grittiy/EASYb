@@ -14,16 +14,16 @@ import { type } from "os";
 export default async function handler(req:NextApiRequest, res:NextApiResponse) {
   switch (req.method) {
     case "GET":
-      return await getUser(req, res);
+      return await getUsers(req, res);
 
     case "POST":
-      return await saveUser(req, res);
+      return await saveUsers(req, res);
     default:
       return res.status(400).send("Method not allowed");
   }
 }
 
-const getUser = async (req:any, res:any) => {
+const getUsers = async (req:any, res:any) => {
   try {
     const results =await connection.query("SELECT * FROM user")  
     return res.status(200).json(results);  
@@ -33,7 +33,7 @@ const getUser = async (req:any, res:any) => {
 }
 
 
-const saveUser = async (req:any, res:any) => {
+const saveUsers = async (req:any, res:any) => {
   try {
     const { 
       user_pname, 
