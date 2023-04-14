@@ -1,7 +1,5 @@
 import type { NextApiRequest,NextApiResponse } from "next";
 import {connection} from "config/db"
-import error from "next/error";
-import { type } from "os";
 // const mysql = require('mysql2');
  
 // create the connection to database
@@ -77,11 +75,19 @@ const saveUsers = async (req:any, res:any) => {
       line_user_id,
       status_user_id,
       group_user_id
-    })    
+    }) as any  
     let message;
-    return res.status(200).json({  ...req.body, id: result.insertId});
+    if(result.insertId) {
+      return res.status(200).json({  ...req.body, id: result.insertId});
+    }else{
+      message = "error"
+      return  res.status(500).json({ message });
+    }
   }catch(err){
-    res.status(500).json({ error: error.message  });
+    if (err) {
+      res.status(500).json({ error: err});
+    }
+    console.error(err)    
   }
 }
 

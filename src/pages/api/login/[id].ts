@@ -36,10 +36,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 const getTask = async (req:any,res:any) => {
     try{
-        const result =await connection.query("SELECT * FROM user WHERE user_id = ?",[req.query.id])
+        const result =await connection.query("SELECT * FROM user WHERE user_id = ?",[req.query.id])as any  
         return res.status(200).json(result[0]);
     }catch (err) {
-        return res.status(500).json({ message: error.message });
+        if (err) {
+            res.status(500).json({ error: err});
+          }
+          console.error(err)    
     }
 }
 
@@ -48,7 +51,10 @@ const deleteUser = async (req:any,res:any) => {
        await connection.query("DELETE FROM user WHERE user_id = ?", [req.query.id])
        return res.status(204).json();
     }catch (err) {
-        return res.status(500).json({ message: error.message });
+        if (err) {  
+            res.status(500).json({ error: err});
+          }
+          console.error(err)   
     }
 }
 
@@ -58,6 +64,9 @@ const updateUser = async (req:any,res:any) => {
        await connection.query("UPDATE user SET ? WHERE user_id  = ?", [req.body,req.query.id])
        return res.status(204).json();
     }catch (err) {
-        return res.status(500).json({ message: error.message });
+        if (err) {
+            res.status(500).json({ error: err});
+          }
+          console.error(err)   
     }
 }
