@@ -14,10 +14,10 @@ export default function Home() {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="icon" href="/logoeasyb.png" />
         <div>
-          hrllo
-          Dashboard
+          <h1 className="text-3xl font-bold underline">     hrllo
+          Dashboard</h1>
+     
         </div>
-
 
         {/* <p>
           Get started by editing&nbsp;

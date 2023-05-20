@@ -1,4 +1,4 @@
-import { connection } from 'config/db';
+import { pool } from 'config/db';
 import type { NextApiRequest, NextApiResponse } from 'next'
 import error from 'next/error';
 
@@ -36,7 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 const getTask = async (req:any,res:any) => {
     try{
-        const result =await connection.query("SELECT * FROM user WHERE user_id = ?",[req.query.id])as any  
+        const result =await pool.query("SELECT * FROM user WHERE user_id = ?",[req.query.id])as any  
         return res.status(200).json(result[0]);
     }catch (err) {
         if (err) {
@@ -48,7 +48,7 @@ const getTask = async (req:any,res:any) => {
 
 const deleteUser = async (req:any,res:any) => {
     try{
-       await connection.query("DELETE FROM user WHERE user_id = ?", [req.query.id])
+       await pool.query("DELETE FROM user WHERE user_id = ?", [req.query.id])
        return res.status(204).json();
     }catch (err) {
         if (err) {  
@@ -61,7 +61,7 @@ const deleteUser = async (req:any,res:any) => {
 const updateUser = async (req:any,res:any) => {
     try{
         console.log(req.body)
-       await connection.query("UPDATE user SET ? WHERE user_id  = ?", [req.body,req.query.id])
+       await pool.query("UPDATE user SET ? WHERE user_id  = ?", [req.body,req.query.id])
        return res.status(204).json();
     }catch (err) {
         if (err) {

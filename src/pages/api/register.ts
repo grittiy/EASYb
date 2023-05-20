@@ -1,5 +1,5 @@
 import type { NextApiRequest,NextApiResponse } from "next";
-import {connection} from "config/db"
+import {pool} from "config/db"
 // const mysql = require('mysql2');
  
 // create the connection to database
@@ -21,9 +21,9 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
   }
 }
 
-const getUsers = async (req:any, res:any) => {
+const getUsers = async (req:NextApiRequest, res:NextApiResponse) => {
   try {
-    const results =await connection.query("SELECT * FROM user")  
+    const results =await pool.query("SELECT * FROM user")  
     return res.status(200).json(results);  
   }catch (error){
     return res.status(500).json({ error });
@@ -31,9 +31,10 @@ const getUsers = async (req:any, res:any) => {
 }
 
 
-const saveUsers = async (req:any, res:any) => {
+const saveUsers = async (req:NextApiRequest, res:NextApiResponse) => {
   try {
     const { 
+      user_id,
       user_pname, 
       first_name, 
       last_name,
@@ -52,11 +53,12 @@ const saveUsers = async (req:any, res:any) => {
       line_user_id,
       status_user_id,
       group_user_id
-    } = req.body.user_name;
+    } = req.body;
     
 
-    const result = await connection.query("INSERT INTO user (user_name)",
+    const result = await pool.query("INSERT INTO user SET ?",
     {
+      user_id,
       user_pname, 
       first_name, 
       last_name,
